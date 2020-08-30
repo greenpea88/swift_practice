@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PageView_tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gek-ab-kEH" userLabel="pagerContainter">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQT-RY-ZnR" userLabel="pagerView" customClass="FSPagerView" customModule="FSPagerView">
+                                        <rect key="frame" x="0.0" y="259" width="414" height="300"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="fkm-tC-gfX"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eES-bH-DZA" userLabel="pageControl" customClass="FSPageControl" customModule="FSPagerView">
+                                        <rect key="frame" x="87" y="574" width="240" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="Qk2-Ol-VoP"/>
+                                            <constraint firstAttribute="height" constant="40" id="fD8-Zq-0X6"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="i0e-k0-mvH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nQT-RY-ZnR" secondAttribute="trailing" id="FzS-Mf-xq5"/>
+                                    <constraint firstItem="nQT-RY-ZnR" firstAttribute="centerY" secondItem="Gek-ab-kEH" secondAttribute="centerY" id="KKJ-Yx-xB6"/>
+                                    <constraint firstItem="nQT-RY-ZnR" firstAttribute="leading" secondItem="Gek-ab-kEH" secondAttribute="leading" id="N8b-Qn-dci"/>
+                                    <constraint firstItem="eES-bH-DZA" firstAttribute="centerX" secondItem="Gek-ab-kEH" secondAttribute="centerX" id="PEZ-uh-bdv"/>
+                                    <constraint firstItem="eES-bH-DZA" firstAttribute="top" secondItem="nQT-RY-ZnR" secondAttribute="bottom" constant="15" id="suE-2U-TE0"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQh-2r-EZm">
+                                <rect key="frame" x="30" y="433" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="ELk-qi-Kxa"/>
+                                    <constraint firstAttribute="height" constant="30" id="dvd-5Q-CJO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="pBY-5E-4Nj"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="yKC-Oc-fy7"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" image="chevron.left" catalog="system"/>
+                                <connections>
+                                    <action selector="onLeftBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z4C-gb-m7S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aL-8r-hWG">
+                                <rect key="frame" x="354" y="433" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="2FR-5C-Cxi"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="aIi-RE-RaN"/>
+                                    <constraint firstAttribute="width" constant="30" id="trH-90-Y7u"/>
+                                    <constraint firstAttribute="height" constant="30" id="tvg-dg-RuL"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" image="chevron.right" catalog="system"/>
+                                <connections>
+                                    <action selector="onRightBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Rq-sG-GdX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1aL-8r-hWG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4Hw-ST-cBl"/>
+                            <constraint firstItem="Gek-ab-kEH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9td-N1-Xqf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1aL-8r-hWG" secondAttribute="trailing" constant="30" id="I7l-Fa-cxf"/>
+                            <constraint firstItem="dQh-2r-EZm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="WSa-qe-zk5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gek-ab-kEH" secondAttribute="trailing" id="YvD-3v-zWo"/>
+                            <constraint firstItem="dQh-2r-EZm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gnT-hn-ohK"/>
+                            <constraint firstItem="Gek-ab-kEH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kfy-sg-Umu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Gek-ab-kEH" secondAttribute="bottom" id="qhA-A7-fIO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="leftBtn" destination="dQh-2r-EZm" id="uSm-dL-t8e"/>
+                        <outlet property="myPageControl" destination="eES-bH-DZA" id="mAY-7b-2f3"/>
+                        <outlet property="myPagerView" destination="nQT-RY-ZnR" id="YgY-TN-hp3"/>
+                        <outlet property="rightBtn" destination="1aL-8r-hWG" id="iJF-jI-8UF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+    </resources>
+</document>

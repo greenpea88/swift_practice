@@ -1,0 +1,6 @@
+framework module Pods_PageView_tutorial {
+  umbrella header "Pods-PageView_tutorial-umbrella.h"
+
+  export *
+  module * { export * }
+}
