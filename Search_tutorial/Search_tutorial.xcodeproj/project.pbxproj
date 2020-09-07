@@ -12,6 +12,8 @@
 		F91E697425060E9000EBF2A5 /* BaseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E697325060E9000EBF2A5 /* BaseInterceptor.swift */; };
 		F91E6976250619C200EBF2A5 /* MyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E6975250619C200EBF2A5 /* MyLogger.swift */; };
 		F91E69782506293500EBF2A5 /* MySearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E69772506293500EBF2A5 /* MySearchRouter.swift */; };
+		F91E698225065A6700EBF2A5 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E698125065A6700EBF2A5 /* Photo.swift */; };
+		F91E698425065AC200EBF2A5 /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E698325065AC200EBF2A5 /* MyError.swift */; };
 		F940909B24F9238F00BC7033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940909A24F9238F00BC7033 /* AppDelegate.swift */; };
 		F940909D24F9238F00BC7033 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940909C24F9238F00BC7033 /* SceneDelegate.swift */; };
 		F940909F24F9238F00BC7033 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940909E24F9238F00BC7033 /* HomeVC.swift */; };
@@ -33,6 +35,8 @@
 		F91E697325060E9000EBF2A5 /* BaseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterceptor.swift; sourceTree = "<group>"; };
 		F91E6975250619C200EBF2A5 /* MyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLogger.swift; sourceTree = "<group>"; };
 		F91E69772506293500EBF2A5 /* MySearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySearchRouter.swift; sourceTree = "<group>"; };
+		F91E698125065A6700EBF2A5 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		F91E698325065AC200EBF2A5 /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
 		F940909724F9238F00BC7033 /* Search_tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Search_tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F940909A24F9238F00BC7033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F940909C24F9238F00BC7033 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,14 @@
 			path = AlamofireAPI;
 			sourceTree = "<group>";
 		};
+		F91E698025065A4A00EBF2A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F91E698125065A6700EBF2A5 /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F940908E24F9238F00BC7033 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +121,7 @@
 		F940909924F9238F00BC7033 /* Search_tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				F91E698025065A4A00EBF2A5 /* Model */,
 				F91E697025060C1D00EBF2A5 /* AlamofireAPI */,
 				F9B9E09624FA9EDD00000404 /* Utiles */,
 				F9B9E09524FA752100000404 /* ViewContollers */,
@@ -146,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				F9B9E09724FA9EFB00000404 /* Constants.swift */,
+				F91E698325065AC200EBF2A5 /* MyError.swift */,
 			);
 			path = Utiles;
 			sourceTree = "<group>";
@@ -266,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91E698225065A6700EBF2A5 /* Photo.swift in Sources */,
 				F94090B624F92A4800BC7033 /* PhotoVC.swift in Sources */,
 				F940909F24F9238F00BC7033 /* HomeVC.swift in Sources */,
 				F91E69782506293500EBF2A5 /* MySearchRouter.swift in Sources */,
@@ -276,6 +291,7 @@
 				F94090B424F9299600BC7033 /* UserListVC.swift in Sources */,
 				F91E6976250619C200EBF2A5 /* MyLogger.swift in Sources */,
 				F9B9E09A24FAA24600000404 /* BaseVC.swift in Sources */,
+				F91E698425065AC200EBF2A5 /* MyError.swift in Sources */,
 				F9B9E09824FA9EFB00000404 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
