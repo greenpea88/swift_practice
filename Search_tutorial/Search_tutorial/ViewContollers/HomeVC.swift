@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import Toast_Swift
-// 오픈 소스 :  https://github.com/scalessec/Toast-Swift
+import Toast_Swift // 오픈 소스 :  https://github.com/scalessec/Toast-Swift
+import Alamofire
 
 
-class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate{
+class HomeVC: BaseVC, UISearchBarDelegate, UIGestureRecognizerDelegate{
 
     
     @IBOutlet weak var searchFilterSegment: UISegmentedControl!
@@ -32,7 +32,7 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
     
     //화면이 넘어가기 전에 준비
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("HomeVC -> prepare() / segueID : \(segue.identifier)")
+//        print("HomeVC -> prepare() / segueID : \(segue.identifier)")
         
         switch segue.identifier {
         case SEGUE_ID.USER_LIST_VC:
@@ -159,7 +159,42 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
         //검색 버튼이 눌렸을 때
         print("HomeVC -> onSearchBtnClicked() / index : \(searchFilterSegment.selectedSegmentIndex)")
         
+//        let url = API.URL + "search/photos"
         
+        guard let inputText = searchBar.text else { return }
+        
+//        let params = ["query" : inputText, "client_id" : API.CLIENT_ID]
+        
+//        AF.request(url, method: .get, parameters: params).responseJSON(completionHandler: {
+//            response in
+//            debugPrint(response)
+//        })
+        
+        //optional로 설정
+        var urlToCall: URLRequestConvertible?
+        
+        switch searchFilterSegment.selectedSegmentIndex {
+        case 0:
+            urlToCall = MySearchRouter.searchPhotos(term: inputText)
+        case 1:
+            urlToCall = MySearchRouter.searchUsers(term: inputText)
+        default:
+            print("default")
+        }
+        
+        //값이 있을 때
+        //validate() -> error를 잡기위해 : retry 호출 됨
+        if let urlConvertible = urlToCall {
+            MyAlamofireManager
+                .shared
+                .session
+                .request(urlConvertible)
+                .validate(statusCode: 200..<401)
+                .responseJSON(completionHandler: {response in
+                debugPrint(response)
+            })
+        }
+
         
         //화면으로 이동
 //        pushVC()

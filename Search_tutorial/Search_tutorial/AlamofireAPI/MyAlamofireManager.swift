@@ -15,11 +15,18 @@ final class MyAlamofireManager{
     static let shared = MyAlamofireManager()
     
     //인터셉터
-//    let interceptors = Interceptor()
+    let interceptors = Interceptor(interceptors:
+                        [
+                            BaseInterceptor()
+                        ])
     
     //이벤트 모니터
-//    let monitor =
+    let monitor = [MyLogger()] as [EventMonitor]
     
     //session
-    var session = Session.default
+    var session : Session
+    
+    private init(){
+        session = Session(interceptor: interceptors, eventMonitors: monitor)
+    }
 }
