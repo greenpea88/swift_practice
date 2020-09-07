@@ -159,8 +159,10 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
         //검색 버튼이 눌렸을 때
         print("HomeVC -> onSearchBtnClicked() / index : \(searchFilterSegment.selectedSegmentIndex)")
         
+        
+        
         //화면으로 이동
-        pushVC()
+//        pushVC()
     }
     
  

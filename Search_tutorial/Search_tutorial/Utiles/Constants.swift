@@ -12,3 +12,8 @@ enum SEGUE_ID{
     static let USER_LIST_VC = "goToUserListVC"
     static let PHOTO_VC = "goToPhotoVC"
 }
+
+enum API{
+    static let URL: String = "https://api.unsplash.com/"
+    static let CLIENT_ID: String = "TNpksiFIfo0s8zexiyrHXGu0GLnQzLJ68waQjkXA3VY"
+}

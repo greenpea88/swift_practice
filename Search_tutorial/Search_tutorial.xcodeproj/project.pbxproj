@@ -69,6 +69,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F91E697025060C1D00EBF2A5 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		F940908E24F9238F00BC7033 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +97,7 @@
 		F940909924F9238F00BC7033 /* Search_tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				F91E697025060C1D00EBF2A5 /* New Group */,
 				F9B9E09624FA9EDD00000404 /* Utiles */,
 				F9B9E09524FA752100000404 /* ViewContollers */,
 				F94090AE24F923E200BC7033 /* Resource */,
