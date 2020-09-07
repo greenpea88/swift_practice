@@ -176,12 +176,16 @@ class HomeVC: BaseVC, UISearchBarDelegate, UIGestureRecognizerDelegate{
         switch searchFilterSegment.selectedSegmentIndex {
         case 0:
 //            urlToCall = MySearchRouter.searchPhotos(term: inputText)
-            MyAlamofireManager.shared.getPhotos(searchTerm: inputText, completion: { result in
+            MyAlamofireManager.shared.getPhotos(searchTerm: inputText, completion: {[weak self] result in
+                
+                guard let self = self else {return}
+                
                 switch result{
                 case .success(let fetchedPhotos):
                     print("HomeVC -> getPhotos Success fetchedPhotos.count : \(fetchedPhotos.count)")
                 case .failure(let error):
                     print("HomeVC -> getPhotos Failure error : \(error.rawValue)")
+                    self.view.makeToast("\(error.rawValue)", duration: 1.0, position: .center)
                 }
             })
         case 1:
