@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Search_tutorial/Pods-Search_tutorial-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework

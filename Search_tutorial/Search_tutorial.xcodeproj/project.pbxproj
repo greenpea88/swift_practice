@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		43E16950AC2C196E40DCDE74 /* Pods_Search_tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 101A9E828280C23BA1B02517 /* Pods_Search_tutorial.framework */; };
+		F91E697225060DD600EBF2A5 /* MyAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E697125060DD600EBF2A5 /* MyAlamofireManager.swift */; };
+		F91E697425060E9000EBF2A5 /* BaseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E697325060E9000EBF2A5 /* BaseInterceptor.swift */; };
 		F940909B24F9238F00BC7033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940909A24F9238F00BC7033 /* AppDelegate.swift */; };
 		F940909D24F9238F00BC7033 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940909C24F9238F00BC7033 /* SceneDelegate.swift */; };
 		F940909F24F9238F00BC7033 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940909E24F9238F00BC7033 /* HomeVC.swift */; };
@@ -25,6 +27,8 @@
 		07B0B4B2EC4CC1F14BAE7994 /* Pods-Search_tutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Search_tutorial.release.xcconfig"; path = "Target Support Files/Pods-Search_tutorial/Pods-Search_tutorial.release.xcconfig"; sourceTree = "<group>"; };
 		101A9E828280C23BA1B02517 /* Pods_Search_tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Search_tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F9932926D6326B8FCF5DD0 /* Pods-Search_tutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Search_tutorial.debug.xcconfig"; path = "Target Support Files/Pods-Search_tutorial/Pods-Search_tutorial.debug.xcconfig"; sourceTree = "<group>"; };
+		F91E697125060DD600EBF2A5 /* MyAlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlamofireManager.swift; sourceTree = "<group>"; };
+		F91E697325060E9000EBF2A5 /* BaseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterceptor.swift; sourceTree = "<group>"; };
 		F940909724F9238F00BC7033 /* Search_tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Search_tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F940909A24F9238F00BC7033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F940909C24F9238F00BC7033 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,11 +73,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F91E697025060C1D00EBF2A5 /* New Group */ = {
+		F91E697025060C1D00EBF2A5 /* AlamofireAPI */ = {
 			isa = PBXGroup;
 			children = (
+				F91E697125060DD600EBF2A5 /* MyAlamofireManager.swift */,
+				F91E697325060E9000EBF2A5 /* BaseInterceptor.swift */,
 			);
-			path = "New Group";
+			path = AlamofireAPI;
 			sourceTree = "<group>";
 		};
 		F940908E24F9238F00BC7033 = {
@@ -97,7 +103,7 @@
 		F940909924F9238F00BC7033 /* Search_tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				F91E697025060C1D00EBF2A5 /* New Group */,
+				F91E697025060C1D00EBF2A5 /* AlamofireAPI */,
 				F9B9E09624FA9EDD00000404 /* Utiles */,
 				F9B9E09524FA752100000404 /* ViewContollers */,
 				F94090AE24F923E200BC7033 /* Resource */,
@@ -256,8 +262,10 @@
 			files = (
 				F94090B624F92A4800BC7033 /* PhotoVC.swift in Sources */,
 				F940909F24F9238F00BC7033 /* HomeVC.swift in Sources */,
+				F91E697425060E9000EBF2A5 /* BaseInterceptor.swift in Sources */,
 				F940909B24F9238F00BC7033 /* AppDelegate.swift in Sources */,
 				F940909D24F9238F00BC7033 /* SceneDelegate.swift in Sources */,
+				F91E697225060DD600EBF2A5 /* MyAlamofireManager.swift in Sources */,
 				F94090B424F9299600BC7033 /* UserListVC.swift in Sources */,
 				F9B9E09A24FAA24600000404 /* BaseVC.swift in Sources */,
 				F9B9E09824FA9EFB00000404 /* Constants.swift in Sources */,
