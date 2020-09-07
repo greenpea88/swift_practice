@@ -11,3 +11,7 @@ youtube : https://www.youtube.com/watch?v=sfRMlyCmWnI&list=PLgOlaPUIbynqRzpQBIdE
 	* 입력한 값 다음 화면으로 전달하기
 	* 키보드 사용(입력되는 글자 수 알기, 키보드 올리기/내리기)
 	* 화면 올리기
+	* Alamofire 이용하여 HTTP 통신
+		> Session Manager : 공통 부분 처리
+		> 공통 parameter 추가
+		> api end-point routing
